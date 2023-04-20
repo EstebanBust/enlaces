@@ -21,5 +21,5 @@ from enlaces import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.enlaces),
-    path('', views.enlaces),
+    path('create_superuser/', views.create_superuser, name="create_superuser"),
 ]
