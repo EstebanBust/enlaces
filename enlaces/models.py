@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 import datetime
 
 class Enlace(models.Model):
@@ -7,4 +8,11 @@ class Enlace(models.Model):
     image = models.ImageField(upload_to="static/img")
     url = models.URLField(blank=True)
     date = models.DateField(datetime.date.today)
+    
+class MyUser(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    # Agrega aquí cualquier otro campo adicional que desees para tu usuario
+
+    def __str__(self):
+        return self.user.username
     
