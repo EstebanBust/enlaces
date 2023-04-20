@@ -1,0 +1,10 @@
+body{background-color: green; color:#fff}
+.card-project:hover{
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+img {
+    width: 200px; /* You can set the dimensions to whatever you want */
+    height: 150px;
+    object-fit: cover;
+}

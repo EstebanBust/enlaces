@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block content %}
+<div class="container">
+    <div class="row my-4 text-center">
+        {% for enlace in enlaces %}
+        <div class="col-md-4 p-4 card-project" href="{{enlace.url}}">
+            <div class="card bg-dark">
+                Consulta datos {{enlace.nombre}}
+                <div class="card-body"><img class="img-fluid" src="{{enlace.image.url}}" alt="{{enlace.nombre}}"><br></div>
+                <p>{{enlace.descripcion}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}
