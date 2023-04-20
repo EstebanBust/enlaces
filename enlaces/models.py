@@ -5,7 +5,7 @@ import datetime
 class Enlace(models.Model):
     nombre = models.CharField(max_length=100)
     descripcion = models.TextField()
-    image = models.ImageField(upload_to="static/img")
+    image = models.ImageField(upload_to="images/")
     url = models.URLField(blank=True)
     date = models.DateField(datetime.date.today)
     
