@@ -26,7 +26,7 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.enlaces),
-    path('chat/', include('chat.urls', namespace='chat')),
+    path('chat/', include('chat.urls')),
     # path('create_superuser/', views.create_superuser, name="create_superuser"),
 ]
 
